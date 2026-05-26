@@ -3,9 +3,9 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="Apex_hand_right">
+  name="right_apex_hand">
   <link
-    name="Palm_link_right">
+    name="right_palm_link">
     <inertial>
       <origin
         xyz="-0.00293711171232502 0.000113307755926331 0.0646647515180297"
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/Palm_link_right.STL" />
+          filename="./meshes/right_palm_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,12 +40,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/Palm_link_right.STL" />
+          filename="./meshes/right_palm_link.STL" />
       </geometry>
     </collision>
   </link>
   <link
-    name="f0_link0">
+    name="right_thumb_link_0">
     <inertial>
       <origin
         xyz="0.00743352291727649 -3.46944695195361E-18 0.00039433256296964"
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link0.STL" />
+          filename="./meshes/right_thumb_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -80,20 +80,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link0.STL" />
+          filename="./meshes/right_thumb_link_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint0"
+    name="right_thumb_j0"
     type="revolute">
     <origin
       xyz="0.012998 0.022996 0.0493"
       rpy="3.1416 0 1.5708" />
     <parent
-      link="Palm_link_right" />
+      link="right_palm_link" />
     <child
-      link="f0_link0" />
+      link="right_thumb_link_0" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -103,7 +103,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f0_link1">
+    name="right_thumb_link_1">
     <inertial>
       <origin
         xyz="-2.48033218011433E-05 0 0.00847195900565391"
@@ -124,7 +124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link1.STL" />
+          filename="./meshes/right_thumb_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -138,20 +138,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link1.STL" />
+          filename="./meshes/right_thumb_link_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint1"
+    name="right_thumb_j1"
     type="revolute">
     <origin
       xyz="0.0145 0 0"
       rpy="-1.5708 0 -1.5708" />
     <parent
-      link="f0_link0" />
+      link="right_thumb_link_0" />
     <child
-      link="f0_link1" />
+      link="right_thumb_link_1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -161,7 +161,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f0_link2">
+    name="right_thumb_link_2">
     <inertial>
       <origin
         xyz="-0.00553826659447157 -0.0253626883037425 -0.000927978595093725"
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link2.STL" />
+          filename="./meshes/right_thumb_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -196,20 +196,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link2.STL" />
+          filename="./meshes/right_thumb_link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint2"
+    name="right_thumb_j2"
     type="revolute">
     <origin
       xyz="0 0 0.014"
       rpy="-1.5708 0 1.5708" />
     <parent
-      link="f0_link1" />
+      link="right_thumb_link_1" />
     <child
-      link="f0_link2" />
+      link="right_thumb_link_2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -219,7 +219,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f0_link2sensor">
+    name="right_thumb_tactile_0">
     <inertial>
       <origin
         xyz="-0.00373820569666419 -0.0269854303577748 -0.000760411010707918"
@@ -240,7 +240,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link2sensor.STL" />
+          filename="./meshes/right_thumb_tactile_0.STL" />
       </geometry>
       <material
         name="">
@@ -254,25 +254,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link2sensor.STL" />
+          filename="./meshes/right_thumb_tactile_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint2sensor"
+    name="right_thumb_j2_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f0_link2" />
+      link="right_thumb_link_2" />
     <child
-      link="f0_link2sensor" />
+      link="right_thumb_tactile_0" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f0_link3">
+    name="right_thumb_link_3">
     <inertial>
       <origin
         xyz="0.0149207703549022 -0.00169559683362767 4.88942856025753E-05"
@@ -293,7 +293,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link3.STL" />
+          filename="./meshes/right_thumb_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -307,20 +307,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link3.STL" />
+          filename="./meshes/right_thumb_link_3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint3"
+    name="right_thumb_j3"
     type="revolute">
     <origin
       xyz="0 -0.055 0"
       rpy="0 0 -1.5708" />
     <parent
-      link="f0_link2" />
+      link="right_thumb_link_2" />
     <child
-      link="f0_link3" />
+      link="right_thumb_link_3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -330,7 +330,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f0_link3sensor">
+    name="right_thumb_tactile_1">
     <inertial>
       <origin
         xyz="0.0155706486585815 -0.000146379053407579 -0.000922913810506569"
@@ -351,7 +351,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link3sensor.STL" />
+          filename="./meshes/right_thumb_tactile_1.STL" />
       </geometry>
       <material
         name="">
@@ -365,25 +365,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link3sensor.STL" />
+          filename="./meshes/right_thumb_tactile_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint3sensor"
+    name="right_thumb_j3_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f0_link3" />
+      link="right_thumb_link_3" />
     <child
-      link="f0_link3sensor" />
+      link="right_thumb_tactile_1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f0_link4">
+    name="right_thumb_link_4">
     <inertial>
       <origin
         xyz="0.00927282757425404 -0.0017363300522532 -2.90586316738228E-07"
@@ -404,7 +404,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link4.STL" />
+          filename="./meshes/right_thumb_link_4.STL" />
       </geometry>
       <material
         name="">
@@ -418,20 +418,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link4.STL" />
+          filename="./meshes/right_thumb_link_4.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint4"
+    name="right_thumb_j4"
     type="revolute">
     <origin
       xyz="0.03 0 0"
       rpy="0 0 0" />
     <parent
-      link="f0_link3" />
+      link="right_thumb_link_3" />
     <child
-      link="f0_link4" />
+      link="right_thumb_link_4" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -439,10 +439,10 @@
       upper="1.396"
       effort="0"
       velocity="8.7266" />
-      <mimic joint="f0_joint3" multiplier="1.0" offset="0"/>
+      <mimic joint="right_thumb_j3" multiplier="1.0" offset="0"/>
   </joint>
   <link
-    name="f0_link4sensor">
+    name="right_thumb_tactile_2">
     <inertial>
       <origin
         xyz="0.0153336175005472 0.000139513120058242 -1.09682940165421E-05"
@@ -463,7 +463,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link4sensor.STL" />
+          filename="./meshes/right_thumb_tactile_2.STL" />
       </geometry>
       <material
         name="">
@@ -477,25 +477,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_link4sensor.STL" />
+          filename="./meshes/right_thumb_tactile_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_joint4sensor"
+    name="right_thumb_j4_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f0_link4" />
+      link="right_thumb_link_4" />
     <child
-      link="f0_link4sensor" />
+      link="right_thumb_tactile_2" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f0_pad">
+    name="right_thumb_pad">
     <inertial>
       <origin
         xyz="-0.015 -0.00780000000000002 -1.52190425531124E-05"
@@ -516,7 +516,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_pad.STL" />
+          filename="./meshes/right_thumb_pad.STL" />
       </geometry>
       <material
         name="">
@@ -530,25 +530,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_pad.STL" />
+          filename="./meshes/right_thumb_pad.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_pad"
+    name="right_thumb_pad"
     type="fixed">
     <origin
       xyz="0.015 0.00779999999999999 0"
       rpy="0 0 0" />
     <parent
-      link="f0_link4" />
+      link="right_thumb_link_4" />
     <child
-      link="f0_pad" />
+      link="right_thumb_pad" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f0_tip">
+    name="right_thumb_tip">
     <inertial>
       <origin
         xyz="-0.028 6.93889390390723E-18 -1.52190425529997E-05"
@@ -569,7 +569,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_tip.STL" />
+          filename="./meshes/right_thumb_tip.STL" />
       </geometry>
       <material
         name="">
@@ -583,25 +583,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f0_tip.STL" />
+          filename="./meshes/right_thumb_tip.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f0_tip"
+    name="right_thumb_tip"
     type="fixed">
     <origin
       xyz="0.028 0 0"
       rpy="0 0 0" />
     <parent
-      link="f0_link4" />
+      link="right_thumb_link_4" />
     <child
-      link="f0_tip" />
+      link="right_thumb_tip" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f1_link0">
+    name="right_index_link_0">
     <inertial>
       <origin
         xyz="0.00518103249700076 -1.19567339432192E-08 0.000208761354639903"
@@ -622,7 +622,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link0.STL" />
+          filename="./meshes/right_index_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -636,20 +636,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link0.STL" />
+          filename="./meshes/right_index_link_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint0"
+    name="right_index_j0"
     type="revolute">
     <origin
       xyz="0.0069979 0.034496 0.1155"
       rpy="0 -1.5708 0" />
     <parent
-      link="Palm_link_right" />
+      link="right_palm_link" />
     <child
-      link="f1_link0" />
+      link="right_index_link_0" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -659,7 +659,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f1_link1">
+    name="right_index_link_1">
     <inertial>
       <origin
         xyz="0.0181272616917464 -0.00100981558882494 2.62717940457957E-09"
@@ -680,7 +680,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link1.STL" />
+          filename="./meshes/right_index_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -694,20 +694,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link1.STL" />
+          filename="./meshes/right_index_link_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint1"
+    name="right_index_j1"
     type="revolute">
     <origin
       xyz="0.016 0 0"
       rpy="-1.570795877559 0 0" />
     <parent
-      link="f1_link0" />
+      link="right_index_link_0" />
     <child
-      link="f1_link1" />
+      link="right_index_link_1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -717,7 +717,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f1_link1sensor">
+    name="right_index_tactile_0">
     <inertial>
       <origin
         xyz="0.0252888233887622 -0.000438388140744088 -7.07457526153074E-05"
@@ -738,7 +738,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link1sensor.STL" />
+          filename="./meshes/right_index_tactile_0.STL" />
       </geometry>
       <material
         name="">
@@ -752,25 +752,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link1sensor.STL" />
+          filename="./meshes/right_index_tactile_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint1sensor"
+    name="right_index_j1_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link1" />
+      link="right_index_link_1" />
     <child
-      link="f1_link1sensor" />
+      link="right_index_tactile_0" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f1_link2">
+    name="right_index_link_2">
     <inertial>
       <origin
         xyz="0.0131267276443713 -0.000547841455176024 1.91054060696971E-08"
@@ -791,7 +791,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link2.STL" />
+          filename="./meshes/right_index_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -805,20 +805,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link2.STL" />
+          filename="./meshes/right_index_link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint2"
+    name="right_index_j2"
     type="revolute">
     <origin
       xyz="0.045 0 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link1" />
+      link="right_index_link_1" />
     <child
-      link="f1_link2" />
+      link="right_index_link_2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -828,7 +828,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f1_link2sensor">
+    name="right_index_tactile_1">
     <inertial>
       <origin
         xyz="0.0133625735951503 -0.000620109526565754 0.000194823181576285"
@@ -849,7 +849,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link2sensor.STL" />
+          filename="./meshes/right_index_tactile_1.STL" />
       </geometry>
       <material
         name="">
@@ -863,20 +863,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link2sensor.STL" />
+          filename="./meshes/right_index_tactile_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint2sensor"
+    name="right_index_j2_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link2" />
+      link="right_index_link_2" />
     <child
-      link="f1_link2sensor" />
+      link="right_index_tactile_1" />
     <axis
       xyz="0 0 0" />
     <limit
@@ -886,7 +886,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f1_link3">
+    name="right_index_link_3">
     <inertial>
       <origin
         xyz="0.00581688683133458 -0.000909457430452975 1.82732995540613E-08"
@@ -907,7 +907,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link3.STL" />
+          filename="./meshes/right_index_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -921,20 +921,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link3.STL" />
+          filename="./meshes/right_index_link_3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint3"
+    name="right_index_j3"
     type="revolute">
     <origin
       xyz="0.025 0 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link2" />
+      link="right_index_link_2" />
     <child
-      link="f1_link3" />
+      link="right_index_link_3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -942,10 +942,10 @@
       upper="1.745"
       effort="0"
       velocity="8.7266" />
-    <mimic joint="f1_joint2" multiplier="1.0" offset="0"/>
+    <mimic joint="right_index_j2" multiplier="1.0" offset="0"/>
   </joint>
   <link
-    name="f1_link3sensor">
+    name="right_index_tactile_2">
     <inertial>
       <origin
         xyz="0.0153340085895587 8.83654923733825E-05 -7.3279503164797E-06"
@@ -966,7 +966,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link3sensor.STL" />
+          filename="./meshes/right_index_tactile_2.STL" />
       </geometry>
       <material
         name="">
@@ -980,25 +980,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_link3sensor.STL" />
+          filename="./meshes/right_index_tactile_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_joint3sensor"
+    name="right_index_j3_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link3" />
+      link="right_index_link_3" />
     <child
-      link="f1_link3sensor" />
+      link="right_index_tactile_2" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f1_pad">
+    name="right_index_pad">
     <inertial>
       <origin
         xyz="-0.016 -0.00789999999999987 -1.52190425530274E-05"
@@ -1019,7 +1019,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_pad.STL" />
+          filename="./meshes/right_index_pad.STL" />
       </geometry>
       <material
         name="">
@@ -1033,25 +1033,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_pad.STL" />
+          filename="./meshes/right_index_pad.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_pad"
+    name="right_index_pad"
     type="fixed">
     <origin
       xyz="0.016 0.00789999999999919 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link3" />
+      link="right_index_link_3" />
     <child
-      link="f1_pad" />
+      link="right_index_pad" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f1_tip">
+    name="right_index_tip">
     <inertial>
       <origin
         xyz="-0.028 2.20309881449055E-16 -1.52190425530205E-05"
@@ -1072,7 +1072,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_tip.STL" />
+          filename="./meshes/right_index_tip.STL" />
       </geometry>
       <material
         name="">
@@ -1086,25 +1086,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f1_tip.STL" />
+          filename="./meshes/right_index_tip.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f1_tip"
+    name="right_index_tip"
     type="fixed">
     <origin
       xyz="0.028 0 0"
       rpy="0 0 0" />
     <parent
-      link="f1_link3" />
+      link="right_index_link_3" />
     <child
-      link="f1_tip" />
+      link="right_index_tip" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f2_link0">
+    name="right_middle_link_0">
     <inertial>
       <origin
         xyz="0.00518103249700078 -1.19567339484233E-08 0.000208761354639874"
@@ -1125,7 +1125,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link0.STL" />
+          filename="./meshes/right_middle_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -1139,20 +1139,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link0.STL" />
+          filename="./meshes/right_middle_link_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint0"
+    name="right_middle_j0"
     type="revolute">
     <origin
       xyz="0.0069979 0.011496 0.1185"
       rpy="0 -1.5708 0" />
     <parent
-      link="Palm_link_right" />
+      link="right_palm_link" />
     <child
-      link="f2_link0" />
+      link="right_middle_link_0" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1162,7 +1162,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f2_link1">
+    name="right_middle_link_1">
     <inertial>
       <origin
         xyz="0.0181272616918263 -0.00100981558888012 2.62724171931628E-09"
@@ -1183,7 +1183,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link1.STL" />
+          filename="./meshes/right_middle_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -1197,20 +1197,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link1.STL" />
+          filename="./meshes/right_middle_link_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint1"
+    name="right_middle_j1"
     type="revolute">
     <origin
       xyz="0.016 0 0"
       rpy="-1.5708 0 0" />
     <parent
-      link="f2_link0" />
+      link="right_middle_link_0" />
     <child
-      link="f2_link1" />
+      link="right_middle_link_1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1220,7 +1220,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f2_link2">
+    name="right_middle_link_2">
     <inertial>
       <origin
         xyz="0.013126987418959 -0.000541581214596073 1.91025937689576E-08"
@@ -1241,7 +1241,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link2.STL" />
+          filename="./meshes/right_middle_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -1255,20 +1255,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link2.STL" />
+          filename="./meshes/right_middle_link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint2"
+    name="right_middle_j2"
     type="revolute">
     <origin
       xyz="0.045 0 0"
       rpy="0 0 -0.0004769" />
     <parent
-      link="f2_link1" />
+      link="right_middle_link_1" />
     <child
-      link="f2_link2" />
+      link="right_middle_link_2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1278,7 +1278,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f2_link2sensor">
+    name="right_middle_tactile_1">
     <inertial>
       <origin
         xyz="0.0133628678078449 -0.000613736802086449 0.000194823178722658"
@@ -1299,7 +1299,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link2sensor.STL" />
+          filename="./meshes/right_middle_tactile_1.STL" />
       </geometry>
       <material
         name="">
@@ -1313,25 +1313,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link2sensor.STL" />
+          filename="./meshes/right_middle_tactile_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint2sensor"
+    name="right_middle_j2_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f2_link2" />
+      link="right_middle_link_2" />
     <child
-      link="f2_link2sensor" />
+      link="right_middle_tactile_1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f2_link3">
+    name="right_middle_link_3">
     <inertial>
       <origin
         xyz="0.00581688683133452 -0.000909457430452941 1.82732995627349E-08"
@@ -1352,7 +1352,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link3.STL" />
+          filename="./meshes/right_middle_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -1366,20 +1366,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link3.STL" />
+          filename="./meshes/right_middle_link_3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint3"
+    name="right_middle_j3"
     type="revolute">
     <origin
       xyz="0.025 1.1923E-05 0"
       rpy="0 0 0.0004769" />
     <parent
-      link="f2_link2" />
+      link="right_middle_link_2" />
     <child
-      link="f2_link3" />
+      link="right_middle_link_3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1387,10 +1387,10 @@
       upper="1.745"
       effort="0"
       velocity="8.7266" />
-    <mimic joint="f2_joint2" multiplier="1.0" offset="0"/>
+    <mimic joint="right_middle_j2" multiplier="1.0" offset="0"/>
   </joint>
   <link
-    name="f2_link3sensor">
+    name="right_middle_tactile_2">
     <inertial>
       <origin
         xyz="0.0153340086196094 8.8365425694569E-05 -7.3277822671431E-06"
@@ -1411,7 +1411,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link3sensor.STL" />
+          filename="./meshes/right_middle_tactile_2.STL" />
       </geometry>
       <material
         name="">
@@ -1425,25 +1425,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link3sensor.STL" />
+          filename="./meshes/right_middle_tactile_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint3sensor"
+    name="right_middle_j3_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f2_link3" />
+      link="right_middle_link_3" />
     <child
-      link="f2_link3sensor" />
+      link="right_middle_tactile_2" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f2_pad">
+    name="right_middle_pad">
     <inertial>
       <origin
         xyz="-0.016 -0.00790000000000033 -1.52190425530066E-05"
@@ -1464,7 +1464,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_pad.STL" />
+          filename="./meshes/right_middle_pad.STL" />
       </geometry>
       <material
         name="">
@@ -1478,25 +1478,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_pad.STL" />
+          filename="./meshes/right_middle_pad.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_pad"
+    name="right_middle_pad"
     type="fixed">
     <origin
       xyz="0.0160000000000002 0.00789999999999927 0"
       rpy="0 0 0" />
     <parent
-      link="f2_link3" />
+      link="right_middle_link_3" />
     <child
-      link="f2_pad" />
+      link="right_middle_pad" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f2_tip">
+    name="right_middle_tip">
     <inertial>
       <origin
         xyz="-0.028 -5.82867087928207E-16 -1.52190425530187E-05"
@@ -1517,7 +1517,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_tip.STL" />
+          filename="./meshes/right_middle_tip.STL" />
       </geometry>
       <material
         name="">
@@ -1531,25 +1531,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_tip.STL" />
+          filename="./meshes/right_middle_tip.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_tip"
+    name="right_middle_tip"
     type="fixed">
     <origin
       xyz="0.0280000000000001 0 0"
       rpy="0 0 0" />
     <parent
-      link="f2_link3" />
+      link="right_middle_link_3" />
     <child
-      link="f2_tip" />
+      link="right_middle_tip" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f2_link1sensor">
+    name="right_middle_tactile_0">
     <inertial>
       <origin
         xyz="0.025288827655078 -0.000438398987762033 -7.07414472094475E-05"
@@ -1570,7 +1570,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link1sensor.STL" />
+          filename="./meshes/right_middle_tactile_0.STL" />
       </geometry>
       <material
         name="">
@@ -1584,25 +1584,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f2_link1sensor.STL" />
+          filename="./meshes/right_middle_tactile_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f2_joint1sensor"
+    name="right_middle_j1_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f2_link1" />
+      link="right_middle_link_1" />
     <child
-      link="f2_link1sensor" />
+      link="right_middle_tactile_0" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f3_link0">
+    name="right_ring_link_0">
     <inertial>
       <origin
         xyz="0.00518103249700075 -1.19567339501581E-08 0.000208761354639902"
@@ -1623,7 +1623,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link0.STL" />
+          filename="./meshes/right_ring_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -1637,20 +1637,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link0.STL" />
+          filename="./meshes/right_ring_link_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_joint0"
+    name="right_ring_j0"
     type="revolute">
     <origin
       xyz="0.0069979 -0.011503 0.1155"
       rpy="0 -1.5708 0" />
     <parent
-      link="Palm_link_right" />
+      link="right_palm_link" />
     <child
-      link="f3_link0" />
+      link="right_ring_link_0" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1660,7 +1660,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f3_link1">
+    name="right_ring_link_1">
     <inertial>
       <origin
         xyz="0.0181277412147468 -0.00100117052517637 2.6233958200228E-09"
@@ -1681,7 +1681,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link1.STL" />
+          filename="./meshes/right_ring_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -1695,20 +1695,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link1.STL" />
+          filename="./meshes/right_ring_link_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_joint1"
+    name="right_ring_j1"
     type="revolute">
     <origin
       xyz="0.016 0 0"
       rpy="-1.5708 -0.0004769 0" />
     <parent
-      link="f3_link0" />
+      link="right_ring_link_0" />
     <child
-      link="f3_link1" />
+      link="right_ring_link_1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1718,7 +1718,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f3_link1sensor">
+    name="right_ring_tactile_0">
     <inertial>
       <origin
         xyz="0.0252890321279993 -0.000426331874284413 -7.07437041742118E-05"
@@ -1739,7 +1739,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link1sensor.STL" />
+          filename="./meshes/right_ring_tactile_0.STL" />
       </geometry>
       <material
         name="">
@@ -1753,25 +1753,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link1sensor.STL" />
+          filename="./meshes/right_ring_tactile_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_link1sensor"
+    name="right_ring_tactile_0"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f3_link1" />
+      link="right_ring_link_1" />
     <child
-      link="f3_link1sensor" />
+      link="right_ring_tactile_0" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f3_link2">
+    name="right_ring_link_2">
     <inertial>
       <origin
         xyz="0.0131267276443713 -0.000547841455176019 1.91054060749013E-08"
@@ -1792,7 +1792,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link2.STL" />
+          filename="./meshes/right_ring_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -1806,20 +1806,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link2.STL" />
+          filename="./meshes/right_ring_link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_joint2"
+    name="right_ring_j2"
     type="revolute">
     <origin
       xyz="0.045 2.1461E-05 0"
       rpy="0 0 0.0004769" />
     <parent
-      link="f3_link1" />
+      link="right_ring_link_1" />
     <child
-      link="f3_link2" />
+      link="right_ring_link_2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1829,7 +1829,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f3_link2sensor">
+    name="right_ring_tactile_1">
     <inertial>
       <origin
         xyz="0.0133625733978299 -0.000620109429886369 0.000194823440938432"
@@ -1850,7 +1850,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link2sensor.STL" />
+          filename="./meshes/right_ring_tactile_1.STL" />
       </geometry>
       <material
         name="">
@@ -1864,25 +1864,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link2sensor.STL" />
+          filename="./meshes/right_ring_tactile_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_joint2sensor"
+    name="right_ring_j2_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f3_link2" />
+      link="right_ring_link_2" />
     <child
-      link="f3_link2sensor" />
+      link="right_ring_tactile_1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f3_link3">
+    name="right_ring_link_3">
     <inertial>
       <origin
         xyz="0.00581688683133458 -0.000909457430452972 1.82732995627349E-08"
@@ -1903,7 +1903,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link3.STL" />
+          filename="./meshes/right_ring_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -1917,20 +1917,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link3.STL" />
+          filename="./meshes/right_ring_link_3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_joint3"
+    name="right_ring_j3"
     type="revolute">
     <origin
       xyz="0.025 0 0"
       rpy="0 0 0" />
     <parent
-      link="f3_link2" />
+      link="right_ring_link_2" />
     <child
-      link="f3_link3" />
+      link="right_ring_link_3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -1938,10 +1938,10 @@
       upper="1.745"
       effort="0"
       velocity="8.7266" />
-    <mimic joint="f3_joint2" multiplier="1.0" offset="0"/>
+    <mimic joint="right_ring_j2" multiplier="1.0" offset="0"/>
   </joint>
   <link
-    name="f3_link3sensor">
+    name="right_ring_tactile_2">
     <inertial>
       <origin
         xyz="0.0153340086129073 8.83654385804332E-05 -7.32818794210201E-06"
@@ -1962,7 +1962,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link3sensor.STL" />
+          filename="./meshes/right_ring_tactile_2.STL" />
       </geometry>
       <material
         name="">
@@ -1976,25 +1976,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_link3sensor.STL" />
+          filename="./meshes/right_ring_tactile_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_joint3sensor"
+    name="right_ring_j3_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f3_link3" />
+      link="right_ring_link_3" />
     <child
-      link="f3_link3sensor" />
+      link="right_ring_tactile_2" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f3_pad">
+    name="right_ring_pad">
     <inertial>
       <origin
         xyz="-0.0159962306453115 -0.00790762955948942 -1.52154901614989E-05"
@@ -2015,7 +2015,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_pad.STL" />
+          filename="./meshes/right_ring_pad.STL" />
       </geometry>
       <material
         name="">
@@ -2029,25 +2029,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_pad.STL" />
+          filename="./meshes/right_ring_pad.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_pad"
+    name="right_ring_pad"
     type="fixed">
     <origin
       xyz="0.016 0.0078999999999992 0"
       rpy="0 0 -0.000476903207335163" />
     <parent
-      link="f3_link3" />
+      link="right_ring_link_3" />
     <child
-      link="f3_pad" />
+      link="right_ring_pad" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f3_tip">
+    name="right_ring_tip">
     <inertial>
       <origin
         xyz="-0.0279999968158867 -1.3353296136131E-05 -1.52190365542305E-05"
@@ -2068,7 +2068,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_tip.STL" />
+          filename="./meshes/right_ring_tip.STL" />
       </geometry>
       <material
         name="">
@@ -2082,25 +2082,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f3_tip.STL" />
+          filename="./meshes/right_ring_tip.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f3_tip"
+    name="right_ring_tip"
     type="fixed">
     <origin
       xyz="0.028 0 0"
       rpy="0 0 -0.000476903207335163" />
     <parent
-      link="f3_link3" />
+      link="right_ring_link_3" />
     <child
-      link="f3_tip" />
+      link="right_ring_tip" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f4_link0">
+    name="right_pinky_link_0">
     <inertial>
       <origin
         xyz="0.00518103249700078 -1.1956733957097E-08 0.000208761354639883"
@@ -2121,7 +2121,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link0.STL" />
+          filename="./meshes/right_pinky_link_0.STL" />
       </geometry>
       <material
         name="">
@@ -2135,20 +2135,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link0.STL" />
+          filename="./meshes/right_pinky_link_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_joint0"
+    name="right_pinky_j0"
     type="revolute">
     <origin
       xyz="0.0069979 -0.034504 0.1125"
       rpy="0 -1.5708 0" />
     <parent
-      link="Palm_link_right" />
+      link="right_palm_link" />
     <child
-      link="f4_link0" />
+      link="right_pinky_link_0" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -2158,7 +2158,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f4_link1">
+    name="right_pinky_link_1">
     <inertial>
       <origin
         xyz="0.0181272616918263 -0.00100981558888017 2.62724172278572E-09"
@@ -2179,7 +2179,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link1.STL" />
+          filename="./meshes/right_pinky_link_1.STL" />
       </geometry>
       <material
         name="">
@@ -2193,20 +2193,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link1.STL" />
+          filename="./meshes/right_pinky_link_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_joint1"
+    name="right_pinky_j1"
     type="revolute">
     <origin
       xyz="0.016 0 0"
       rpy="-1.5708 0 0" />
     <parent
-      link="f4_link0" />
+      link="right_pinky_link_0" />
     <child
-      link="f4_link1" />
+      link="right_pinky_link_1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -2216,7 +2216,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f4_link1sensor">
+    name="right_pinky_tactile_0">
     <inertial>
       <origin
         xyz="0.0252888233889428 -0.000438388140702666 -7.07457526702635E-05"
@@ -2237,7 +2237,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link1sensor.STL" />
+          filename="./meshes/right_pinky_tactile_0.STL" />
       </geometry>
       <material
         name="">
@@ -2251,25 +2251,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link1sensor.STL" />
+          filename="./meshes/right_pinky_tactile_0.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_joint1sensor"
+    name="right_pinky_j1_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f4_link1" />
+      link="right_pinky_link_1" />
     <child
-      link="f4_link1sensor" />
+      link="right_pinky_tactile_0" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f4_link2">
+    name="right_pinky_link_2">
     <inertial>
       <origin
         xyz="0.013126987418959 -0.000541581214596265 1.91025937637535E-08"
@@ -2290,7 +2290,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link2.STL" />
+          filename="./meshes/right_pinky_link_2.STL" />
       </geometry>
       <material
         name="">
@@ -2304,20 +2304,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link2.STL" />
+          filename="./meshes/right_pinky_link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_joint2"
+    name="right_pinky_j2"
     type="revolute">
     <origin
       xyz="0.045 0 0"
       rpy="0 0 -0.0004769" />
     <parent
-      link="f4_link1" />
+      link="right_pinky_link_1" />
     <child
-      link="f4_link2" />
+      link="right_pinky_link_2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -2327,7 +2327,7 @@
       velocity="8.7266" />
   </joint>
   <link
-    name="f4_link2sensor">
+    name="right_pinky_tactile_1">
     <inertial>
       <origin
         xyz="0.0133628678066478 -0.00061373686719834 0.000194823171161186"
@@ -2348,7 +2348,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link2sensor.STL" />
+          filename="./meshes/right_pinky_tactile_1.STL" />
       </geometry>
       <material
         name="">
@@ -2362,25 +2362,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link2sensor.STL" />
+          filename="./meshes/right_pinky_tactile_1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_link2sensor"
+    name="right_pinky_tactile_1"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f4_link2" />
+      link="right_pinky_link_2" />
     <child
-      link="f4_link2sensor" />
+      link="right_pinky_tactile_1" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f4_link3">
+    name="right_pinky_link_3">
     <inertial>
       <origin
         xyz="0.00581731989295267 -0.000906683235434067 1.82720533287162E-08"
@@ -2401,7 +2401,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link3.STL" />
+          filename="./meshes/right_pinky_link_3.STL" />
       </geometry>
       <material
         name="">
@@ -2415,20 +2415,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link3.STL" />
+          filename="./meshes/right_pinky_link_3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_joint3"
+    name="right_pinky_j3"
     type="revolute">
     <origin
       xyz="0.025 1.1923E-05 0"
       rpy="0 0 0" />
     <parent
-      link="f4_link2" />
+      link="right_pinky_link_2" />
     <child
-      link="f4_link3" />
+      link="right_pinky_link_3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -2436,10 +2436,10 @@
       upper="1.745"
       effort="0"
       velocity="8.7266" />
-    <mimic joint="f4_joint2" multiplier="1.0" offset="0"/>
+    <mimic joint="right_pinky_j2" multiplier="1.0" offset="0"/>
   </joint>
   <link
-    name="f4_link3sensor">
+    name="right_pinky_tactile_2">
     <inertial>
       <origin
         xyz="0.0153339648062042 9.56784639174141E-05 -7.32812401998267E-06"
@@ -2460,7 +2460,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link3sensor.STL" />
+          filename="./meshes/right_pinky_tactile_2.STL" />
       </geometry>
       <material
         name="">
@@ -2474,25 +2474,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_link3sensor.STL" />
+          filename="./meshes/right_pinky_tactile_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_joint3sensor"
+    name="right_pinky_j3_sensor"
     type="fixed">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="f4_link3" />
+      link="right_pinky_link_3" />
     <child
-      link="f4_link3sensor" />
+      link="right_pinky_tactile_2" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f4_pad">
+    name="right_pinky_pad">
     <inertial>
       <origin
         xyz="-0.016 -0.0079000000000001 -1.52190425529997E-05"
@@ -2513,7 +2513,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_pad.STL" />
+          filename="./meshes/right_pinky_pad.STL" />
       </geometry>
       <material
         name="">
@@ -2527,25 +2527,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_pad.STL" />
+          filename="./meshes/right_pinky_pad.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_pad"
+    name="right_pinky_pad"
     type="fixed">
     <origin
       xyz="0.0159962306453115 0.00790762955265271 0"
       rpy="0 0 0.000476903207341931" />
     <parent
-      link="f4_link3" />
+      link="right_pinky_link_3" />
     <child
-      link="f4_pad" />
+      link="right_pinky_pad" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="f4_tip">
+    name="right_pinky_tip">
     <inertial>
       <origin
         xyz="-0.028 -1.77809156287623E-16 -1.52190425530205E-05"
@@ -2566,7 +2566,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_tip.STL" />
+          filename="./meshes/right_pinky_tip.STL" />
       </geometry>
       <material
         name="">
@@ -2580,20 +2580,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes/f4_tip.STL" />
+          filename="./meshes/right_pinky_tip.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="f4_tip"
+    name="right_pinky_tip"
     type="fixed">
     <origin
       xyz="0.0279999968158867 1.33532892995824E-05 0"
       rpy="0 0 0.000476903207341931" />
     <parent
-      link="f4_link3" />
+      link="right_pinky_link_3" />
     <child
-      link="f4_tip" />
+      link="right_pinky_tip" />
     <axis
       xyz="0 0 0" />
   </joint>
