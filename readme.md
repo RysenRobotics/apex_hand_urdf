@@ -1,12 +1,16 @@
 **Language / 语言：** **English** · [中文](README.zh.md)
 
+**Version / 版本：** **0.1.0** (see [`VERSION`](VERSION))
+
+> **Preliminary release:** This package is at an early stage and is **not** the final release. The URDF, meshes, and documentation may change in future versions.
+
 ## 1. About this document
 
 This document describes the RysenRobotics Apex Hand URDF package. Both the URDF and this README are preliminary. Dynamics parameters in the URDF are **not fully calibrated** yet. If you find errors, email **support@dexcelbot.com** and we will address them as soon as possible.
 
 ## 2. Directory layout
 
-At the repository root you will find **`apex_hand_left/`**, **`apex_hand_right/`** (left/right URDF and meshes), **`images/`** (figures for this README), **`README.md`** (this file, English, default), and **`README.zh.md`** (Chinese). Each hand folder contains **URDF + `meshes/`**, matching the `./meshes/` relative paths referenced inside the URDF.
+At the repository root you will find **`apex_hand_left/`**, **`apex_hand_right/`** (left/right URDF and meshes), **`images/`** (figures for this README), **`VERSION`** (current package version), **`README.md`** (this file, English, default), and **`README.zh.md`** (Chinese). Each hand folder contains **URDF + `meshes/`**, matching the `./meshes/` relative paths referenced inside the URDF.
 
 ```text
 apex_hand_urdf/                      # repo root (folder name may differ after clone)
@@ -27,6 +31,7 @@ apex_hand_urdf/                      # repo root (folder name may differ after c
 │   ├── left_skeleton.png
 │   ├── right.png
 │   └── right_skeleton.png
+├── VERSION                         # Current version (0.1.0)
 ├── README.md                       # English (default, this file)
 └── README.zh.md                    # Chinese
 ```
