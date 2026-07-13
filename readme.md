@@ -1,6 +1,6 @@
 **Language / 语言：** **English** · [中文](README.zh.md)
 
-**Version / 版本：** **0.1.0** (see [`VERSION`](VERSION))
+**Version / 版本：** **0.2.0** (see [`VERSION`](VERSION))
 
 > **Preliminary release:** This package is at an early stage and is **not** the final release. The URDF, meshes, and documentation may change in future versions.
 
@@ -31,7 +31,7 @@ apex_hand_urdf/                      # repo root (folder name may differ after c
 │   ├── left_skeleton.png
 │   ├── right.png
 │   └── right_skeleton.png
-├── VERSION                         # Current version (0.1.0)
+├── VERSION                         # Current version (0.2.0)
 ├── README.md                       # English (default, this file)
 └── README.zh.md                    # Chinese
 ```
